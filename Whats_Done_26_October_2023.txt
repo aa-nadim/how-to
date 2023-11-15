@@ -1,0 +1,248 @@
+
+
+--- Check for linux update ---
+
+
+https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
+	
+	* ufw status
+
+	 sudo ufw status
+	Status: inactive
+
+
+-------------
+
+https://superuser.com/questions/1124317/how-to-verify-if-iptables-is-running-or-the-firewall-is-activated
+
+
+	
+mukul@esoft-bulksms-01:~$  service iptables status
+○ iptables.service - netfilter persistent configuration
+     Loaded: loaded (/lib/systemd/system/iptables.service; alias)
+     Active: inactive (dead)
+       Docs: man:netfilter-persistent(8)
+
+
+----------------
+
+route
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         _gateway        0.0.0.0         UG    0      0        0 eth0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-4a0bb92dfe7b
+172.19.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-4e252723dd69
+172.25.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-ea5a9a60a7fc
+192.168.2.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+
+
+---------------
+
+
+ ip route show
+default via 192.168.2.254 dev eth0 proto static
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+172.18.0.0/16 dev br-4a0bb92dfe7b proto kernel scope link src 172.18.0.1
+172.19.0.0/16 dev br-4e252723dd69 proto kernel scope link src 172.19.0.1 linkdown
+172.25.0.0/16 dev br-ea5a9a60a7fc proto kernel scope link src 172.25.0.1
+192.168.2.0/24 dev eth0 proto kernel scope link src 192.168.2.168
+
+
+------------------
+
+	Make fastapi/streamlit work on port 7500
+
+---------------
+
+	Teach Intern what is 0.0.0.0 & localhost 127.0.0.1 --> He didnt know this
+
+---------------
+
+ifconfig
+br-4a0bb92dfe7b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:e5ff:fe5c:beb4  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:e5:5c:be:b4  txqueuelen 0  (Ethernet)
+        RX packets 178053  bytes 510811272 (510.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 175759  bytes 27741390 (27.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+br-4e252723dd69: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
+        inet6 fe80::42:16ff:fe6e:6efe  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:16:6e:6e:fe  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 165686  bytes 18225436 (18.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+br-ea5a9a60a7fc: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.25.0.1  netmask 255.255.0.0  broadcast 172.25.255.255
+        inet6 fe80::42:3dff:fed7:db53  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:3d:d7:db:53  txqueuelen 0  (Ethernet)
+        RX packets 769626958  bytes 112676591278 (112.6 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1114567441  bytes 102023803604 (102.0 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:a9:aa:3a:5e  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.2.168  netmask 255.255.255.0  broadcast 192.168.2.255
+        inet6 fe80::215:5dff:fe01:da3c  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:01:da:3c  txqueuelen 1000  (Ethernet)
+        RX packets 104694195  bytes 22655015115 (22.6 GB)
+        RX errors 0  dropped 1  overruns 0  frame 0
+        TX packets 39181834  bytes 14770751192 (14.7 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 17901339  bytes 1582737958 (1.5 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 17901339  bytes 1582737958 (1.5 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth0028ef5: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::ec9d:79ff:fe7d:98a4  prefixlen 64  scopeid 0x20<link>
+        ether ee:9d:79:7d:98:a4  txqueuelen 0  (Ethernet)
+        RX packets 175429  bytes 69615080 (69.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 163046  bytes 31815340 (31.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth09f4364: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a0f7:6dff:fea6:21b  prefixlen 64  scopeid 0x20<link>
+        ether a2:f7:6d:a6:02:1b  txqueuelen 0  (Ethernet)
+        RX packets 587780  bytes 50264310 (50.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 487789  bytes 57494870 (57.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth23b5104: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::183b:60ff:fe26:9ce7  prefixlen 64  scopeid 0x20<link>
+        ether 1a:3b:60:26:9c:e7  txqueuelen 0  (Ethernet)
+        RX packets 31729520  bytes 2900570844 (2.9 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21914272  bytes 3224522160 (3.2 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth26394ae: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::fc85:e4ff:fe0c:43a2  prefixlen 64  scopeid 0x20<link>
+        ether fe:85:e4:0c:43:a2  txqueuelen 0  (Ethernet)
+        RX packets 32013370  bytes 2927708049 (2.9 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 22109286  bytes 3253652146 (3.2 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth66da1ad: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::94c7:33ff:fe2d:1b85  prefixlen 64  scopeid 0x20<link>
+        ether 96:c7:33:2d:1b:85  txqueuelen 0  (Ethernet)
+        RX packets 189212931  bytes 30222525014 (30.2 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 273900205  bytes 25078149976 (25.0 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth80cf1d7: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::3802:bcff:feb6:7303  prefixlen 64  scopeid 0x20<link>
+        ether 3a:02:bc:b6:73:03  txqueuelen 0  (Ethernet)
+        RX packets 31898320  bytes 2920480319 (2.9 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 22040002  bytes 3250695287 (3.2 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethb7f2127: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::8883:f2ff:fe82:2daa  prefixlen 64  scopeid 0x20<link>
+        ether 8a:83:f2:82:2d:aa  txqueuelen 0  (Ethernet)
+        RX packets 31748062  bytes 2905592032 (2.9 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21942662  bytes 3237083470 (3.2 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethcae6e77: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a89d:7aff:fe70:b4bd  prefixlen 64  scopeid 0x20<link>
+        ether aa:9d:7a:70:b4:bd  txqueuelen 0  (Ethernet)
+        RX packets 60685  bytes 139772042 (139.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 61557  bytes 9099306 (9.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethef6592f: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::fc83:10ff:fe73:311c  prefixlen 64  scopeid 0x20<link>
+        ether fe:83:10:73:31:1c  txqueuelen 0  (Ethernet)
+        RX packets 28743132  bytes 2635441441 (2.6 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19866159  bytes 2946607074 (2.9 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+---------
+
+Run the port checker program
+
+	uvicorn main:app --host 0.0.0.0  --port 7500
+	
+
+Check them on browser or curl
+
+	https://192.168.2.168:7500
+	http://192.168.2.168:7500
+
+	curl ifconfig.me
+	https://202.0.94.44:7500
+
+	https://202.0.94.44:7500
+	http://202.0.94.44:7500
+	
+
+--------------------------
+
+https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/
+
+
+	usermod -aG sudo username
+
+---------------------------
+
+ sudo usermod -aG sudo esoftdev1
+[sudo] password for mukul:
+
+
+Nanim Awal's user esoftdev1 made to root
+
+-----------------------
+
+netstat -a -n
+
+-----
+
+https://vitux.com/how-to-view-the-network-routing-table-in-ubuntu/
+
+netstat -rn
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.2.254   0.0.0.0         UG        0 0          0 eth0
+172.17.0.0      0.0.0.0         255.255.0.0     U         0 0          0 docker0
+172.18.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-4a0bb92dfe7b
+172.19.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-4e252723dd69
+172.25.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-ea5a9a60a7fc
+192.168.2.0     0.0.0.0         255.255.255.0   U         0 0          0 eth0
+
+mukul@esoft-bulksms-01:~$
+
+----------------
+
+
+

@@ -1,0 +1,74 @@
+curl -X GET -H "Content-Type: application/json" -d '{
+    "sms": "sendSms",
+    "msisdn": "8801059198366",
+    "cli": "SYMPHONY",
+    "user": "SymIT",
+    "pass": "BWdzrpia0sNXd49"
+}' "http://172.20.94.9:7000/set/sendSms"
+
+Response⇒
+{"status":"ERROR","detail":"IP 172.20.94.9 not allowed for username None."}
+
+User with username 'None' and IP '172.20.94.9' is Noooot found in the list.
+INFO:     172.20.94.9:60220 - "GET /set/sendSms HTTP/1.1" 401 Unauthorized
+
+
+-----------------------------------------------------------------------------------------------------------------------
+curl -X GET -H "Content-Type: application/json" -d '{
+    "sms": "sendSms",
+    "msisdn": "8801059198366",
+    "cli": "SYMPHONY"
+}' "http://172.20.94.9:7000/set/sendSms?user=SymIT&pass=BWdzrpia0sNXd49"
+
+Response⇒
+{"detail":[{"loc":["query","cli"],"msg":"field required","type":"value_error.missing"},{"loc":["query","cli"],"msg":"field required","type":"value_error.missing"},{"loc":["query","msisdn"],"msg":"field
+required","type":"value_error.missing"},{"loc":["query","sms"],"msg":"field required","type":"value_error.missing"}]}
+
+User with username 'SymIT' and IP '172.20.94.9' is found in the list.
+INFO:     172.20.94.9:51452 - "GET /set/sendSms?user=SymIT&pass=BWdzrpia0sNXd49 HTTP/1.1" 422 Unprocessable Entity
+
+
+-------------------------------------------------------------------------------------------------------------------------
+curl -X GET -H "Content-Type: application/json" -d '{
+    "sms": "sendSms",
+    "msisdn": "8801059198366"
+}' "http://172.20.94.9:7000/set/sendSms?cli=SYMPHONY&user=SymIT&pass=BWdzrpia0sNXd49"
+
+Response⇒
+{"detail":[{"loc":["query","msisdn"],"msg":"field required","type":"value_error.missing"},{"loc":["query","sms"],"msg":"field required","type":"value_error.missing"}]}
+
+User with username 'SymIT' and IP '172.20.94.9' is found in the list.
+User with username 'SymIT' and password 'BWdzrpia0sNXd49' and cli 'SYMPHONY' is found in the list.
+INFO:     172.20.94.9:38166 - "GET /set/sendSms?cli=SYMPHONY&user=SymIT&pass=BWdzrpia0sNXd49 HTTP/1.1" 422 Unprocessable Entity
+
+
+--------------------------------------------------------------------------------------------------------------------------
+curl -X GET "http://172.20.94.9:7000/set/sendSms?sms=sendSms&msisdn=8801059198366&cli=SYMPHONY&user=SymIT&pass=BWdzrpia0sNXd49"
+
+Response⇒
+{"status":"OK","dateTime":1699758126.302896,"msisdn":"8801059198366","msg":"sendSms","msg_length":7,"detail":""}
+
+User with username 'SymIT' and IP '172.20.94.9' is found in the list.
+User with username 'SymIT' and password 'BWdzrpia0sNXd49' and cli 'SYMPHONY' is found in the list.
+
+----------------------------------------------------------------------------------------------------
+curl -X GET "http://172.21.153.55:7000/set/sendSms?sms=sendSms&msisdn=8801059198366&user=SymIT&pass=BWdzrpia0sNXd49"
+
+Response⇒
+{"detail":[{"loc":["query","cli"],"msg":"field required","type":"value_error.missing"},{"loc":["query","cli"],"msg":"field required","type":"value_error.missing"}]}
+
+User with username 'SymIT' and IP '172.21.153.55' is found in the list.
+INFO:     172.21.153.55:39904 - "GET /set/sendSms?sms=sendSms&msisdn=8801059198366&user=SymIT&pass=BWdzrpia0sNXd49 HTTP/1.1" 422 Unprocessable Entity
+
+-------------------------------------------------------------------------------------------------
+curl -X GET "http://172.21.153.55:7000/set/sendSms?sms=sendSms&msisdn=8801059198366&cli=ANY&user=SymIT&pass=BWdzrpia0sNXd49"
+
+Response⇒
+{"detail":"Could not validate credentials"}
+
+User with username 'SymIT' and IP '172.21.153.55' is found in the list.
+User with username 'SymIT' and password 'BWdzrpia0sNXd49' and cli 'ANY' is NNNooootttt found in the list.
+
+
+
+

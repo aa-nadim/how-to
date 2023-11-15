@@ -1,0 +1,15 @@
+lsof -i :7500
+
+
+(env) esoftdev1@esoft-bulksms-01:~/streamlit-dashboard$ lsof -i :7500
+COMMAND     PID      USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME
+uvicorn 1761548 esoftdev1    6u  IPv4 79411594      0t0  TCP *:7500 (LISTEN)
+
+
+(env) esoftdev1@esoft-bulksms-01:~/streamlit-dashboard$ kill 1761548
+
+
+
+
+
+uvicorn main:app --host 0.0.0.0 --port 7500

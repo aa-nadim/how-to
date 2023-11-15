@@ -1,0 +1,424 @@
+esoftdev1@esoft-bulksms-01:~$ netstat -a -n
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 192.168.2.168:7500      0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:8000            0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:7000            0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.1:6012          0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.1:6011          0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:5432            0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:9443            0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 192.168.2.168:22        172.16.33.238:50175     ESTABLISHED
+tcp        0      0 192.168.2.168:22        172.16.33.250:2134      ESTABLISHED
+tcp        0      0 192.168.2.168:22        172.16.33.250:2133      ESTABLISHED
+tcp        0      0 192.168.2.168:22        172.16.33.238:50174     ESTABLISHED
+tcp        0    208 192.168.2.168:22        172.16.33.250:2329      ESTABLISHED
+tcp        0      0 192.168.2.168:22        172.16.33.250:2330      ESTABLISHED
+tcp6       0      0 :::8000                 :::*                    LISTEN
+tcp6       0      0 :::7000                 :::*                    LISTEN
+tcp6       0      0 ::1:6010                :::*                    LISTEN
+tcp6       0      0 ::1:6011                :::*                    LISTEN
+tcp6       0      0 ::1:6012                :::*                    LISTEN
+tcp6       0      0 :::5432                 :::*                    LISTEN
+tcp6       0      0 :::9443                 :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+udp        0      0 127.0.0.53:53           0.0.0.0:*
+raw6       0      0 :::58                   :::*                    7
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     27240    /run/systemd/resolve/io.systemd.Resolve
+unix  2      [ ACC ]     STREAM     LISTENING     30533    /run/containerd/s/acd9e5d31c0a5842e7fbc84aed252d803a8331cbf7c460d9ce1b3e467d9a5173
+unix  2      [ ]         DGRAM                    140386   /run/user/1004/systemd/notify
+unix  2      [ ]         DGRAM                    35191    /run/user/1002/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     140389   /run/user/1004/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     35194    /run/user/1002/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     140395   /run/user/1004/bus
+unix  2      [ ACC ]     STREAM     LISTENING     35200    /run/user/1002/bus
+unix  2      [ ACC ]     STREAM     LISTENING     25591    @/org/kernel/linux/storage/multipathd
+unix  2      [ ACC ]     STREAM     LISTENING     140397   /run/user/1004/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     35202    /run/user/1002/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     140399   /run/user/1004/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     35204    /run/user/1002/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     140401   /run/user/1004/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     35206    /run/user/1002/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     23037    /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     140403   /run/user/1004/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     35208    /run/user/1002/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     23039    /run/docker.sock
+unix  2      [ ACC ]     STREAM     LISTENING     140405   /run/user/1004/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     35210    /run/user/1002/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     27261    /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     140407   /run/user/1004/pk-debconf-socket
+unix  2      [ ACC ]     STREAM     LISTENING     35212    /run/user/1002/pk-debconf-socket
+unix  2      [ ACC ]     STREAM     LISTENING     27263    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     140409   /run/user/1004/snapd-session-agent.socket
+unix  2      [ ACC ]     STREAM     LISTENING     35214    /run/user/1002/snapd-session-agent.socket
+unix  2      [ ACC ]     STREAM     LISTENING     31485    /run/containerd/s/5ab2ccf3459928686c17f8dc92f361645479ca9794ad42f0ac6ba88e8ffe1959
+unix  2      [ ACC ]     STREAM     LISTENING     27265    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     31515    /run/containerd/s/9c465b1c21310d3607a3db32b247a254a6b43dc16d80c7f6260d6d30525e6752
+unix  2      [ ACC ]     STREAM     LISTENING     24274    /run/irqbalance/irqbalance728.sock
+unix  2      [ ACC ]     STREAM     LISTENING     27386    /run/containerd/containerd.sock.ttrpc
+unix  2      [ ACC ]     STREAM     LISTENING     27388    /run/containerd/containerd.sock
+unix  2      [ ACC ]     STREAM     LISTENING     32008    /run/containerd/s/6d0fb95aa188a1eb43307b84293833268bd3ec1b6d038cf55aa1ae1ab02a28e7
+unix  2      [ ACC ]     STREAM     LISTENING     27417    /var/run/docker/metrics.sock
+unix  3      [ ]         DGRAM      CONNECTED     25575    /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     25578    /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     32021    /run/containerd/s/3051f9c3774b898e4a5feebe7b95704c6b6ddf235ce407f194d842e222ab86c3
+unix  2      [ ACC ]     STREAM     LISTENING     25580    /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     29097    /run/containerd/s/2e6cad1d3d56c753ec424b65d458e745a2e896713cfe94e55acac687a22517d5
+unix  2      [ ACC ]     STREAM     LISTENING     25581    /run/systemd/io.system.ManagedOOM
+unix  2      [ ACC ]     STREAM     LISTENING     25589    /run/lvm/lvmpolld.socket
+unix  2      [ ]         DGRAM                    25592    /run/systemd/journal/syslog
+unix  2      [ ACC ]     STREAM     LISTENING     23768    /run/systemd/fsck.progress
+unix  14     [ ]         DGRAM      CONNECTED     23775    /run/systemd/journal/dev-log
+unix  11     [ ]         DGRAM      CONNECTED     23777    /run/systemd/journal/socket
+unix  2      [ ACC ]     STREAM     LISTENING     23779    /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     23782    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     30032    /run/containerd/s/97c43ab91dc5722d5e57a40e7e8800f251c899bdd981f55ce94ec7f29ef993e9
+unix  2      [ ACC ]     STREAM     LISTENING     26066    /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     33864    /run/containerd/s/5e85be81a2a2a853db7e7d0ff771de1e79a23f424048661d77833fdd66ee5ede
+unix  2      [ ACC ]     STREAM     LISTENING     23041    @ISCSIADM_ABSTRACT_NAMESPACE
+unix  2      [ ACC ]     STREAM     LISTENING     23536    /var/run/docker/libnetwork/ade9e334f003.sock
+unix  2      [ ACC ]     STREAM     LISTENING     33191    /run/containerd/s/fe39473b9689dbd9387999cb4ed350fa56febe8f8b57cd8903e30a5f27e9967e
+unix  2      [ ACC ]     STREAM     LISTENING     23042    /var/snap/lxd/common/lxd/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     23044    /var/snap/lxd/common/lxd-user/unix.socket
+unix  2      [ ]         DGRAM                    27856    @00007
+unix  3      [ ]         STREAM     CONNECTED     23204    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     23052    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     34336    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         DGRAM      CONNECTED     27057
+unix  3      [ ]         STREAM     CONNECTED     32483    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         STREAM     CONNECTED     29340
+unix  3      [ ]         STREAM     CONNECTED     27838    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23213
+unix  3      [ ]         STREAM     CONNECTED     26334    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24289    /run/systemd/journal/stdout
+unix  2      [ ]         STREAM     CONNECTED     36030
+unix  3      [ ]         DGRAM      CONNECTED     35192
+unix  3      [ ]         STREAM     CONNECTED     27772    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     33218    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         STREAM     CONNECTED     27352
+unix  3      [ ]         STREAM     CONNECTED     222294
+unix  3      [ ]         STREAM     CONNECTED     27713
+unix  3      [ ]         STREAM     CONNECTED     137916
+unix  3      [ ]         STREAM     CONNECTED     27256
+unix  3      [ ]         STREAM     CONNECTED     22900
+unix  2      [ ]         DGRAM      CONNECTED     22678
+unix  3      [ ]         STREAM     CONNECTED     28920
+unix  3      [ ]         STREAM     CONNECTED     24257
+unix  3      [ ]         STREAM     CONNECTED     27837
+unix  3      [ ]         STREAM     CONNECTED     137936
+unix  3      [ ]         STREAM     CONNECTED     33872    /run/containerd/s/5e85be81a2a2a853db7e7d0ff771de1e79a23f424048661d77833fdd66ee5ede
+unix  3      [ ]         STREAM     CONNECTED     33945    /run/containerd/s/fe39473b9689dbd9387999cb4ed350fa56febe8f8b57cd8903e30a5f27e9967e
+unix  3      [ ]         STREAM     CONNECTED     34296    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         STREAM     CONNECTED     31468
+unix  2      [ ]         DGRAM      CONNECTED     26590
+unix  3      [ ]         STREAM     CONNECTED     29111
+unix  2      [ ]         DGRAM      CONNECTED     23267
+unix  3      [ ]         STREAM     CONNECTED     137829   /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     26597
+unix  2      [ ]         DGRAM      CONNECTED     24354
+unix  3      [ ]         STREAM     CONNECTED     24309    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     140335
+unix  3      [ ]         STREAM     CONNECTED     27714
+unix  3      [ ]         STREAM     CONNECTED     22727
+unix  3      [ ]         STREAM     CONNECTED     30015    /run/containerd/s/3051f9c3774b898e4a5feebe7b95704c6b6ddf235ce407f194d842e222ab86c3
+unix  3      [ ]         STREAM     CONNECTED     33960
+unix  3      [ ]         STREAM     CONNECTED     35153
+unix  3      [ ]         DGRAM      CONNECTED     26599
+unix  3      [ ]         STREAM     CONNECTED     23232    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24426
+unix  3      [ ]         STREAM     CONNECTED     29370    /run/containerd/s/9c465b1c21310d3607a3db32b247a254a6b43dc16d80c7f6260d6d30525e6752
+unix  2      [ ]         STREAM     CONNECTED     137781
+unix  3      [ ]         STREAM     CONNECTED     27277
+unix  3      [ ]         STREAM     CONNECTED     222295
+unix  3      [ ]         STREAM     CONNECTED     24365
+unix  3      [ ]         STREAM     CONNECTED     31016
+unix  3      [ ]         DGRAM      CONNECTED     26596
+unix  3      [ ]         STREAM     CONNECTED     26576
+unix  2      [ ]         DGRAM      CONNECTED     222249
+unix  3      [ ]         STREAM     CONNECTED     24420
+unix  3      [ ]         STREAM     CONNECTED     33725    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     137856
+unix  3      [ ]         STREAM     CONNECTED     27216
+unix  2      [ ]         DGRAM      CONNECTED     23049
+unix  3      [ ]         STREAM     CONNECTED     27774    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     27770    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     26068
+unix  3      [ ]         DGRAM      CONNECTED     140387
+unix  3      [ ]         STREAM     CONNECTED     26344    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     30859    /run/dbus/system_bus_socket
+unix  2      [ ]         STREAM     CONNECTED     137813
+unix  3      [ ]         DGRAM      CONNECTED     22743
+unix  3      [ ]         DGRAM      CONNECTED     25577
+unix  3      [ ]         STREAM     CONNECTED     27355    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     26598
+unix  3      [ ]         STREAM     CONNECTED     27773    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     33293    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         DGRAM      CONNECTED     35193
+unix  3      [ ]         STREAM     CONNECTED     27855    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     23216
+unix  2      [ ]         STREAM     CONNECTED     221569
+unix  3      [ ]         STREAM     CONNECTED     33317
+unix  3      [ ]         STREAM     CONNECTED     27343    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     27060
+unix  2      [ ]         DGRAM                    27790
+unix  3      [ ]         STREAM     CONNECTED     27735
+unix  3      [ ]         STREAM     CONNECTED     23239
+unix  3      [ ]         STREAM     CONNECTED     138926   /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     34358
+unix  3      [ ]         STREAM     CONNECTED     27809    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24106    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24372
+unix  3      [ ]         STREAM     CONNECTED     24424    /run/containerd/containerd.sock
+unix  2      [ ]         DGRAM      CONNECTED     221588
+unix  3      [ ]         STREAM     CONNECTED     27771    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     33937
+unix  3      [ ]         STREAM     CONNECTED     35264
+unix  3      [ ]         STREAM     CONNECTED     29104
+unix  2      [ ]         DGRAM      CONNECTED     140345
+unix  3      [ ]         STREAM     CONNECTED     27722
+unix  2      [ ]         DGRAM      CONNECTED     27230
+unix  3      [ ]         STREAM     CONNECTED     35948    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         STREAM     CONNECTED     22721
+unix  3      [ ]         STREAM     CONNECTED     27874
+unix  2      [ ]         DGRAM      CONNECTED     140355
+unix  2      [ ]         DGRAM      CONNECTED     137803
+unix  3      [ ]         STREAM     CONNECTED     33151
+unix  3      [ ]         STREAM     CONNECTED     31523
+unix  3      [ ]         STREAM     CONNECTED     24209    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24313    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     221719
+unix  3      [ ]         STREAM     CONNECTED     140391
+unix  3      [ ]         STREAM     CONNECTED     35858
+unix  3      [ ]         STREAM     CONNECTED     27746
+unix  2      [ ]         DGRAM      CONNECTED     24348
+unix  2      [ ]         DGRAM      CONNECTED     27053
+unix  3      [ ]         STREAM     CONNECTED     29092    /run/containerd/s/6d0fb95aa188a1eb43307b84293833268bd3ec1b6d038cf55aa1ae1ab02a28e7
+unix  3      [ ]         STREAM     CONNECTED     23264
+unix  3      [ ]         DGRAM      CONNECTED     22742
+unix  3      [ ]         STREAM     CONNECTED     22990    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     137937
+unix  3      [ ]         STREAM     CONNECTED     34258
+unix  3      [ ]         STREAM     CONNECTED     33099
+unix  2      [ ]         DGRAM      CONNECTED     35180
+unix  3      [ ]         STREAM     CONNECTED     27831    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35268
+unix  3      [ ]         STREAM     CONNECTED     30010    /run/containerd/s/2e6cad1d3d56c753ec424b65d458e745a2e896713cfe94e55acac687a22517d5
+unix  3      [ ]         DGRAM      CONNECTED     25576
+unix  3      [ ]         STREAM     CONNECTED     35196
+unix  3      [ ]         STREAM     CONNECTED     27769
+unix  2      [ ]         DGRAM      CONNECTED     27767
+unix  3      [ ]         DGRAM      CONNECTED     140388
+unix  3      [ ]         STREAM     CONNECTED     29125
+unix  3      [ ]         STREAM     CONNECTED     23240
+unix  3      [ ]         STREAM     CONNECTED     35877    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         STREAM     CONNECTED     27359
+unix  3      [ ]         STREAM     CONNECTED     27342
+unix  3      [ ]         DGRAM      CONNECTED     27058
+unix  3      [ ]         STREAM     CONNECTED     219049
+unix  3      [ ]         STREAM     CONNECTED     24314    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27875    /run/containerd/containerd.sock
+unix  3      [ ]         STREAM     CONNECTED     34335
+unix  3      [ ]         STREAM     CONNECTED     27336    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     219050
+unix  2      [ ]         DGRAM      CONNECTED     35163
+unix  2      [ ]         DGRAM      CONNECTED     35137
+unix  3      [ ]         STREAM     CONNECTED     33884    /run/containerd/containerd.sock.ttrpc
+unix  3      [ ]         STREAM     CONNECTED     27356
+unix  2      [ ]         DGRAM      CONNECTED     22738
+unix  2      [ ]         STREAM     CONNECTED     222234
+unix  3      [ ]         STREAM     CONNECTED     34185    /run/containerd/containerd.sock.ttrpc
+unix  2      [ ]         DGRAM      CONNECTED     27857
+unix  3      [ ]         STREAM     CONNECTED     27725    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24367
+unix  3      [ ]         STREAM     CONNECTED     35263
+unix  3      [ ]         STREAM     CONNECTED     30545    /run/containerd/s/5ab2ccf3459928686c17f8dc92f361645479ca9794ad42f0ac6ba88e8ffe1959
+unix  3      [ ]         STREAM     CONNECTED     30041    /run/containerd/s/97c43ab91dc5722d5e57a40e7e8800f251c899bdd981f55ce94ec7f29ef993e9
+unix  3      [ ]         STREAM     CONNECTED     36032    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24285
+unix  2      [ ]         DGRAM      CONNECTED     33627
+unix  3      [ ]         STREAM     CONNECTED     27360
+unix  3      [ ]         STREAM     CONNECTED     27826    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     27768
+unix  3      [ ]         STREAM     CONNECTED     24271    /run/systemd/journal/stdout
+unix  2      [ ]         STREAM     CONNECTED     36015
+unix  3      [ ]         STREAM     CONNECTED     24304
+unix  3      [ ]         STREAM     CONNECTED     34918
+unix  3      [ ]         STREAM     CONNECTED     29327    /run/containerd/s/acd9e5d31c0a5842e7fbc84aed252d803a8331cbf7c460d9ce1b3e467d9a5173
+unix  3      [ ]         STREAM     CONNECTED     23263
+unix  3      [ ]         STREAM     CONNECTED     35269
+unix  3      [ ]         STREAM     CONNECTED     221718
+unix  3      [ ]         STREAM     CONNECTED     137915
+unix  3      [ ]         STREAM     CONNECTED     33160
+unix  3      [ ]         DGRAM      CONNECTED     27059
+esoftdev1@esoft-bulksms-01:~$ logout
+
+
+ 1037  ufw status
+ 1038  history
+ 1039  telnet 192.168.2.168 7000
+ 1040  telnet 192.168.2.168 7500
+ 1041  telnet 192.168.2.168 7000
+ 1042  ls
+ 1043  cd streamlit-dashboard
+ 1044  ls
+ 1045  source env/bin/activate
+ 1046  uvicorn homepage:app --host 0.0.0.0 --port 7000
+ 1047  uvicorn homepage:app --host 0.0.0.0 --port 7500
+ 1048  uvicorn homepage:app --host 202.0.94.44 --port 7500
+ 1049  uvicorn main:app --host 202.0.94.44 --port 7500
+ 1050  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1051  uvicorn main:app --host 198.168.2.168 --port 7500
+ 1052  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1053  uvicorn main:app --host 202.0.94.44 --port 7500
+ 1054  telnet 0.0.0.0 7500
+ 1055  telnet 127.0.0.1 7500
+ 1056  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1057  uvicorn main:app --host 198.168.2.168 --port 7500
+ 1058  ifconfig
+ 1059  uvicorn main:app --host 198.168.2.168 --port
+ 1060  uvicorn main:app --host 198.168.2.168 --port 7000
+ 1061  uvicorn main:app --host 198.168.2.168 --port 7500
+ 1062  uvicorn main:app --host 198.168.2.168 --port 22
+ 1063  uvicorn main:app --host 198.168.2.168 --port 7000
+ 1064  uvicorn main:app --host 198.168.2.168
+ 1065  uvicorn main:app --host 198.168.2.168 --port 7500
+ 1066  uvicorn main:app --host 127.0.0.1 --port 7500
+ 1067  uvicorn main:app --host 198.168.2.168 --port 7500
+ 1068  curl ifconfig.me
+ 1069  ifconfig
+ 1070  curl ifconfig.me
+ 1071  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1072  cd streamlit-dashboard
+ 1073  source env/bin/activate
+ 1074  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1075  uvicorn main:app --host 0.0.0.0 --port 8000
+ 1076  uvicorn main:app --host 0.0.0.0 --port 7400
+ 1077  clear
+ 1078  sudo ufw status
+ 1079  service iptables status
+ 1080  curl http://192.168.2.168:7400
+ 1081  service iptables status
+ 1082  service iptables --help
+ 1083  service iptables --full-restart
+ 1084  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1085  service iptables status
+ 1086  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1087  logout
+ 1088  ls
+ 1089  cd streamlit-dashboard
+ 1090  ls
+ 1091  source env/bin/activate
+ 1092  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1093  clear
+ 1094  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1095  logout
+ 1096  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1097  ls
+ 1098  cd streamlit-dashboard
+ 1099  ls
+ 1100  source env/bin/activate
+ 1101  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1102  clear
+ 1103  logout
+ 1104  su
+ 1105  curl ifconfig.me
+ 1106  curl http://192.168.2.168:7000
+ 1107  curl http://192.168.2.168:7500
+ 1108  curl 192.168.2.168 7500
+ 1109  curl http://192.168.2.168:7500
+ 1110  su
+ 1111  ls
+ 1112  cd streamlit-dashboard
+ 1113  ls
+ 1114  source env/bin/activate
+ 1115  uvicorn main:app --host 0.0.0.0 --port 7000
+ 1116  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1117  sudo ufw status
+ 1118  service iptables status
+ 1119  curl http://192.168.2.168:7500
+ 1120  telnet 192.168.2.168 7500
+ 1121  sudo ufw status
+ 1122  service iptables status
+ 1123  history
+ 1124  ls
+ 1125  cd streamlit-dashboard
+ 1126  ls
+ 1127  source env/bin/activate
+ 1128  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1129  ls
+ 1130  cd streamlit-dashboard
+ 1131  ls
+ 1132  cd env/bin/activate
+ 1133  source env/bin/activate
+ 1134  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1135  sudo ufw status
+ 1136  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1137  clear
+ 1138  sudo ufw status
+ 1139  ls
+ 1140  uvicorn main:app --host 0.0.0.0 --port 7700
+ 1141  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1142  uvicorn main:app --host 0.0.0.0 --port 7400
+ 1143  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1144  uvicorn main:app --host 0.0.0.0 --port 7400
+ 1145  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1146  uvicorn main:app --host 0.0.0.0 --port 7000
+ 1147  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1148  uvicorn main:app --host 0.0.0.0 --port 7400
+ 1149  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1150  ls
+ 1151  cd streamlit-dashboard
+ 1152  source env/bin/activate
+ 1153  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1154  curl ifconfig.me
+ 1155  service iptables status
+ 1156  ls
+ 1157  cd streamlit-dashboard
+ 1158  ls
+ 1159  source env/bin/activate
+ 1160  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1161  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1162  ls
+ 1163  cd streamlit-dashboard
+ 1164  ls
+ 1165  source env/bin/activate
+ 1166  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1167  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1168  uvicorn main:app --host 0.0.0.0 --port 7500
+ 1169  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1170  logout
+ 1171  curl http://192.168.2.168:7500
+ 1172  netstart -a -n
+ 1173  netstat -a -n
+ 1174  logout
+ 1175  curl http://192.168.2.168:7500
+ 1176  logout
+ 1177  service iptables status
+ 1178  service iptables --help
+ 1179  service iptables status
+ 1180  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1181  ls
+ 1182  cd streamlit-dashboard
+ 1183  ls
+ 1184  source env/bin/activate
+ 1185  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1186  netstat -a -n
+ 1187  Karnel IP routing table
+ 1188  Kernel IP routing table
+ 1189  netstat -r
+ 1190  uvicorn main:app --host 192.168.2.168 --port 7500
+ 1191  logout
+ 1192  netstat -a -n
+ 1193  logout
+ 1194  curl http://192.168.2.168:7500
+ 1195  logout
+ 1196  ufw status
+ 1197  sudo ufw status
+ 1198  service iptables status
+ 1199  history
+
