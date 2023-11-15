@@ -1,0 +1,19 @@
+(venv) nadim@nadim-Virtual-Machine:~/myPythonApp$ sudo ufw status
+[sudo] password for nadim:
+Status: inactive
+(venv) nadim@nadim-Virtual-Machine:~/myPythonApp$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+(venv) nadim@nadim-Virtual-Machine:~/myPythonApp$ sudo ufw allow 8501/tcp
+Rule added
+Rule added (v6)
+(venv) nadim@nadim-Virtual-Machine:~/myPythonApp$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+8501/tcp                   ALLOW       Anywhere                                                                                                    
+8501/tcp (v6)              ALLOW       Anywhere (v6)                                                                                               
+
+(venv) nadim@nadim-Virtual-Machine:~/myPythonApp$ sudo ufw reload
+Firewall reloaded

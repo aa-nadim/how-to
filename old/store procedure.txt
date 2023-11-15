@@ -1,0 +1,67 @@
+CREATE OR REPLACE FUNCTION public.func_broadcast_bulk_generic()
+ RETURNS integer
+ LANGUAGE plpgsql
+AS $function$
+	declare 
+	CURRENT_DATETIME timestamp;
+	
+	mobile_number_len_validation integer := 13;
+	BROADCAST_COMMENT varchar(256)       := 'BULK MSG Platform - GROUP';
+
+	-----------------------------------------------------------
+	
+	DEFAULT_NON_MASKING_ROUTE        VARCHAR(30) = 'teletalk1';
+	DEFAULT_NON_MASKING_CLI          VARCHAR(30) = '8801552146302';
+
+
+	DEFAULT_MASKING_ROUTE_GP         VARCHAR(30);
+	DEFAULT_MASKING_ROUTE_ROBI       VARCHAR(30);
+	DEFAULT_MASKING_ROUTE_BANGLALINK VARCHAR(30);
+	DEFAULT_MASKING_ROUTE_TELETALK   VARCHAR(30);
+	-----------------------------------------------------------
+
+	begin
+
+	CURRENT_DATETIME := CURRENT_TIMESTAMP;
+
+	
+	INSERT INTO tbl_outbox (to_mobile, from_mobile, msg_body,msg_option,record_owner, route_gateway, record_comment)
+	
+	select recepient_reg.mobile_no, replace(from_mobile,'%',DEFAULT_NON_MASKING_CLI) ,brd_cast.telco_msgBody,brd_cast.telco_msgOption, brd_cast.record_owner,
+	case
+		  
+		  WHEN from_mobile ='%' THEN DEFAULT_NON_MASKING_ROUTE
+		  	CASE
+       		  	when  left(recepient_reg.mobile_no,5) = '88017' THEN 'gp1'
+       		  	when  left(recepient_reg.mobile_no,5) = '88013' THEN 'gp1'
+       		  	when  left(recepient_reg.mobile_no,5) = '88015' THEN 'teletalk1'
+       		  	when  left(recepient_reg.mobile_no,5) = '88018' THEN 'robi1'
+       		  	when  left(recepient_reg.mobile_no,5) = '88016' THEN 'robi1'
+       		  	when  left(recepient_reg.mobile_no,5) = '88019' THEN 'banglalink1'
+       		  	when  left(recepient_reg.mobile_no,5) = '88014' THEN 'banglalink1'
+       		 
+       		END 
+          -------------------------------------------------------
+       END 
+    ------------------------------------------------
+	
+	,
+	BROADCAST_COMMENT
+	
+	FROM tbl_generic_recepient_reg AS recepient_reg,tbl_broadcast_bulk_generic AS brd_cast
+	WHERE (LENGTH(recepient_reg.mobile_no) >= mobile_number_len_validation ) AND (recepient_reg.mobile_no LIKE '880%')AND
+	current_datetime >= brd_cast.trigger_datetime AND
+	(recepient_reg.record_owner = brd_cast.record_owner) AND
+	(recepient_reg.category_1 LIKE '%' || brd_cast.category_1) AND
+	(recepient_reg.enabled= True) AND (brd_cast.enabled = true ) AND
+	(brd_cast.is_bulk_broadcasted = False );
+	
+	UPDATE tbl_broadcast_bulk_generic SET is_bulk_broadcasted = TRUE , update_datetime = NOW()
+	where CURRENT_DATETIME >= trigger_datetime  AND
+    (enabled= TRUE) AND (is_bulk_broadcasted = FALSE);
+
+	
+    return 0;
+	end;
+$function$
+;

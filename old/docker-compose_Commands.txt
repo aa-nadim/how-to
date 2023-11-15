@@ -1,0 +1,72 @@
+
+
+	sudo docker-compose up -d --build
+
+
+	-d = detached ???
+
+
+---
+***
+
+	sudo docker-compose up --build
+
+	sudo docker-compose up --build --rm
+
+
+
+---
+
+
+	sudo docker-compose start
+	sudo docker-compose stop
+	sudo docker-compose pause
+	sudo docker-compose unpause
+	sudo docker-compose ps
+	sudo docker-compose up
+	sudo docker-compose down
+
+
+	sudo docker-compose exec ???
+
+
+---
+ [17th August 2022, Wednesday] 
+
+Run the container in detached mode
+	sudo docker-compose up -d
+
+List of running docker containers
+	sudo docker-compose ps
+
+Run command inside the container
+	sudo docker-compose run db bash
+
+stop container
+	sudo docker-compose down
+
+Verify the yml file
+	sudo docker-compose -f docker-compose.yml config
+
+-------
+
+
+blinkDocker 
+
+	-- runtime error
+
+--
+
+
+	esoftTEST
+
+	77keCP1R89sh
+
+------------
+
+
+http://202.0.94.44:7000/set/sendSmsUnicode?sms=%E0%A6%86%E0%A6%B2%E0%A7%8B&msisdn=8801711135082&user=sym&pass=1234
+
+
+
+

@@ -1,0 +1,33 @@
+
+sudo docker images
+
+REPOSITORY               TAG             IMAGE ID       CREATED         SIZE
+bulkapi-customimage      latest          e2af58723f07   2 minutes ago   1.03GB
+python                   3.10.4          e4ccc57bca82   2 months ago    920MB
+php                      fpm-alpine      bdaaed87c005   2 months ago    73.3MB
+nginx                    stable-alpine   4341472ddfe8   2 months ago    23.4MB
+postgres                 14.2-alpine     114818c12d10   4 months ago    211MB
+portainer/portainer-ce   latest          ed396c816a75   6 months ago    280MB
+
+----
+
+lets run this ..
+
+view runing docker
+
+sudo docker ps
+
+---
+
+view all dockers ..
+
+docker ps -a
+
+--
+
+Remove crashed docker images
+
+	sudo docker rm 57b3c387db35
+
+-----
+
