@@ -6,7 +6,8 @@ Regular Expression for Banglagesh with country code, min==max==13 characters(sta
 - working
 
 All links:
--https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh
+- https://stackoverflow.com/questions/30658946/validate-bangladeshi-phone-number-with-optional-88-or-01-preceeding-11-digits
 
 for test:
 -https://rubular.com/r/3tI2ute1lWRz7r
