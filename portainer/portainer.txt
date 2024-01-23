@@ -1,17 +1,6 @@
 how to use portainer in my localhost===>windows + linux
-
- Link==>https://docs.portainer.io/start/install/server/docker/linux
-
---
-
-Prerequisites:
-
-	Make sure you have Docker installed on your machine.
-
----
-Step 1: Run Portainer Container
-	
- docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
-
-Step 2: Access Portainer Web Interface
- Open your web browser and go to https://localhost:9443. 
+_______________________________________________________
+	All Link:
+	- https://docs.portainer.io/start/install/server/docker/linux
+	- https://airdesk.com/2017/10/windows-containers-portainer-gui/
+	- https://gist.github.com/SeanSobey/344edd228922ffd4266ae7d451421ab6
