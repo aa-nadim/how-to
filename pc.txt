@@ -1,0 +1,25 @@
+
+ASUS VivoBook(X542UN)
+
+Intel Core i5 
+8th Gen
+
+RAM: 8GB DDR4, 
+
+Storage: 120GB SSD, 1TB HDD,
+
+Intel(R) UHD Graphics 620,
+NVIDIA GeForce MX150,
+
+
+
+Intel Core i7 
+8th Gen
+
+RAM: 16GB DDR4, 
+
+Storage: 512GB SSD,
+
+Intel(R) UHD Graphics 620,
+NVIDIA GeForce MX150,
+
