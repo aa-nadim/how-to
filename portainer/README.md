@@ -16,8 +16,6 @@ Access Portainer Web Interface:
 
 ![alt text](https://github.com/aa-nadim/how-to/blob/main/portainer/images/p.png?raw=true)
 
-![alt text](https://github.com/aa-nadim/how-to/blob/main/portainer/images/p2.png?raw=true)
-
 ![alt text](https://github.com/aa-nadim/how-to/blob/main/portainer/images/p3.png?raw=true)
 
 ![alt text](https://github.com/aa-nadim/how-to/blob/main/portainer/images/p4.png?raw=true)
