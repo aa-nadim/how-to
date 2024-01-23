@@ -1,0 +1,12 @@
+Regular Expression for Banglagesh with country code, min==max==13 characters(start with 880) 
+
+==>  ^8801[13-9]\d{8}$ 
+- not working
+==> ^8801[3-9]\d{8}$
+- working
+
+All links:
+-https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh
+
+for test:
+-https://rubular.com/r/3tI2ute1lWRz7r
